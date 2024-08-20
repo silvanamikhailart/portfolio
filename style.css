@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* =================================================*/
+/* Header */
+/* Header Background */
+header {
+    background-color: #000000;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 200px;
+}
+/* Left Logo */
+.logo {
+     text-decoration: none;
+     color: #fdcc08;
+     text-transform: uppercase;
+     font-weight: 700;
+     font-size: 1.8em;
+}
+/* Right Navigation */
+.navigation a {
+    color:#fdcc08 ;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+    transition:   0.7s ease;
+}
+/* Right Navigation Hover */
+.navigation a:hover {
+    color: #f77f00;
+    transform: scale(1.1);
+}
+/* End Header */
+
+/*Start Main */
+/* Section Padding */
+section {
+    padding: 100px 200px;
+}
+/* Main Background */
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(Services.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* =================================================*/
+/* Main Content */
+/* Headline 2 */
+.main h2 {
+    color: #fff;
+    font-size: 1.4 em;
+    font-weight: 500;
+}
+.main h2 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: #fDCC08;
+    font-size: 2.8em;
+    font-weight: 600;
+}
+/* Headline 3 */
+.main h3 {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+/* Bouton */
+.main-btn{
+    color: #fff;
+    background-color: #fDCC08;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    transition:   0.7s ease;
+}
+.main-btn:hover {
+    background-color: #f77f00;
+    transform: scale(1.1);
+}
+/* Icons*/
+.social-media a{
+    color: #fff;
+    font-size: 1.7em;
+    display: inline-block;
+    padding-right: 20px;
+    transition:   0.7s ease;    
+}
+.social-media a:hover{
+    color: #000000;
+    transform: scale(1.1);
+}
+/*End Main */
+/* =================================================*/
+/* Start Services */
+/* Title */
+.title{
+    display: flex;
+    justify-content: center;
+    color: #fdcc08;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+/* Content */
+.content{
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* Card */
+.card{
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition:  0.7s ease;
+}
+ /* Card Hover */
+.card:hover{
+    transform: scale(1.1);
+}
+/* Card Icon */
+.icon{
+    font-size: 5em;
+    color: #fdcc08;
+    text-align: center;
+    transform: 0.7s ease;
+}
+.card:hover .icon{
+    color: #f77f00;    
+}
+.card:hover .info h3{
+    color: #f77f00;    
+}
+/* Card Info */
+.info{
+    text-align: center;
+}
+.info h3{
+    color: #fdcc08;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+/* End Services */
+/* =================================================*/
+/* Start Projects */
+.projects {
+    background-color: #000000; 
+}
+
+.projects .content {
+    margin-top: 30px;
+}
+
+/* Card Project */
+.cardp {
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em; /* Increased height */
+    width: 18em; /* Increased width */  
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.5s ease;
+    position: relative; /* Added for proper positioning of button */
+}
+
+/* Popup Button */
+.popup-btn {
+        text-decoration: none;
+        color: #ffffff;
+        background: #000000;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 10px 20px; /* Increased padding for better appearance */
+        border-radius: 10px;
+        cursor: pointer;
+}
+/* Popup Button Hover */
+.popup-btn:hover {
+        color: #f77f00;
+}
+/* Popup View*/
+.popup-view {
+    z-index: 2;
+    background: rgba(225, 225, 255, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.popup-view.active {
+    opacity: 1;
+    visibility: visible;
+}
+/* Popup Card */
+.popup-view .popup-card{
+    padding: relative;
+    display: flex;
+    width: 800px;  /* smaller */
+    height: 500px; /* smaller */
+    margin: 20px;
+}
+/* Popup Image */
+.popup-image{
+    z-index: 2;
+    background: #000000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 45%;
+    height: 90%;
+    transform: translateY(25px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.popup-image img{
+    z-index: 2;
+    position: relative;
+    width: 80%;
+    height: 90%;
+    left: 0px;
+    border-radius: 10px ;    
+}
+/* Popup Info */
+.infoc{
+    z-index: 2;
+    background: #fff;
+    flex-direction: column;
+    display: flex;
+    width: 55%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 10px;
+} 
+/* close btn */ 
+.popup-view .popup-card .close-btn{
+    color: #000000;
+    z-index: 3;
+    position:sticky;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+}  
+/* Card Hover */
+.cardp:hover {
+    transform: scale(1.05);
+}
+
+.cardp:hover .project-image img {
+    opacity: 0.9;
+}
+
+/* Card Project Image */
+.project-image img {
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Ensure the image is below the button */
+}
+.infoc h2{
+    font-size: 30px;
+    line-height: 20px;
+    margin: 10px;
+    margin-bottom: 15px;
+}
+.infoc h2 span{
+    padding-top: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.infoc p{
+    font-size: 15px;
+    margin: 10px;
+}
+.infoc .View-on-Instagram{
+    color: #FFF;
+    background-color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px auto;
+    padding: 10px 50px;
+    border-radius:20px ;
+    transition: 0.3s;
+}
+.infoc .View-on-Instagram:hover{
+    background-color: #f77f00;
+}
+/* Card Project Info */
+.cardp .project-info {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 1.5em;
+}
+/* End Projects */
+/* =================================================*/
+/* Start Contact */
+.Lable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000  ;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+/* Card Icon */
+.social-mediax a{
+    display: block;
+    
+    justify-content:center;
+    color: #000000;
+    text-align: center;
+    font-size: 4em;
+    transform: 0.7s ease;
+}
+/* Card Info */
+.infox h3{
+    color: #000000;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+/* Card */
+.cardx{
+    background-color: #fff;
+    width: 15em;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition:  0.7s ease;
+}
+ /* Card Hover */
+.cardx:hover{
+    transform: scale(1.1);
+}
+/* card hover */ 
+.cardx:hover .social-mediax a{
+    color: #f77f00;    
+}
+.cardx:hover .infox h3{
+    color: #f77f00;    
+}
+/* End Contact */
+/* =================================================*/
+/* Footer */
+footer{
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+
+    .navigation a{
+        padding-left: 10px;
+    }
+
+    .title{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main-content h2{
+        font-size: 1em;
+    }
+
+    .main-content h3{
+        font-size: 1.6em;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width:641px){
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body{
+        font-size: 12px;
+    }
+    .main h2{
+        font-size: 1.1em;
+    }
+    .main h2 span{
+        font-size: 2.1em;
+    }
+    .main h3{
+        font-size: 1.4em;
+    }
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+    .logo{
+        font-size: 1em;
+    }
+    .main-content h2{
+        font-size: 0.6em;
+    }
+}
+@media (max-width:450px){
+    .content{
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    body{
+        font-size: 10px;
+    }
+    .main h2{
+        font-size: 1.1em;
+    }
+    .main h2 span{
+        font-size: 2em;
+    }
+    .main h3{
+        font-size: 1.2em;
+    }
+    .main-btn{
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    .social-media a{
+        font-size: 1.5em;
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+    .main-content h2{
+        font-size: 0.6em;
+    }
+
+    .main-content h3{
+        font-size: 1.2em;
+    }
+    .logo{
+        font-size: 0.8em;
+    }
+    .main-content h2{
+        font-size: 0.5em;
+    }
+    .main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: url(Services.jpg);
+        background-size: cover;
+        background-position: 70%;
+        background-attachment: fixed;
+    }
+    .card{
+        width: 10em;
+        height: 10em;
+        padding: 15px;
+        margin: 10px;
+    }
+    .icon{
+        font-size: 2em;
+    }
+    .info h3{
+        font-size: 1em;
+    }
+    .info p{
+        visibility: hidden;
+    }
+    .cardx{
+        width: 10em;
+        height: 8em;
+        padding: 15px;
+        margin: 10px;
+    }   
+    .social-mediax a{
+        font-size: 3em;
+    }
+    .infox{
+        visibility: hidden;
+    }
+    .popup-btn{
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+    .popup-card{
+        flex-direction: column;
+        width: 550px;
+        height:fit-content ;
+    }
+    .popup-view .popup-card{
+        padding: relative;
+        display: flex;
+        width: 500px;  /* smaller */
+        height: 600px; /* smaller */
+        margin: 20px;
+    }
+    .popup-image{
+        z-index: 3;
+        width: 150PX;
+        height: 1500px;
+        transform: translateX(0px);
+        border-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .popup-image img{
+        left: initial;
+        width: 80%  ;
+        max-height: 100%;
+    }
+    .infoc{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border-radius: 10px;
+        border-top-left-radius: 0px;
+    }
+    .infoc h2{
+        margin: 20px 5px 5px 5px;
+        font-size: 2.5em;
+    }
+    .infoc h2 span{
+        font-size: 10px;
+    }
+    .infoc p{
+        margin: 5px;
+        font-size: 13px;    
+    }
+    .infoc .View-on-Instagram{
+        margin: 5px auto;
+        padding: 5px 40px;
+        font-size: 12px;
+    }
+    .close-btn{
+        z-index: 4;
+        right: 10px;
+        color: #5c5c5c;
+        
+    }
+}
+
