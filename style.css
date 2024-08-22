@@ -474,7 +474,7 @@ footer{
         font-size: 0.6em;
     }
 }
-@media (max-width:450px){
+@media (max-width:600px){
     .content{
         flex-direction: row;
         align-items: center;
