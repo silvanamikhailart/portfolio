@@ -509,10 +509,11 @@ footer{
         visibility: hidden;
     }
     .cardx{
-        width: 10em;
+        width: 20em;
         height: 8em;
         padding: 15px;
-        margin: 10px;
+        margin-right: 20px;
+        margin: 5px;
     }   
     .social-mediax a{
         font-size: 3em;
